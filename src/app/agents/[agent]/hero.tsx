@@ -24,7 +24,7 @@ type AgentData = {
 
 export default function Hero({ data }: AgentData) {
   const { displayName, role, abilities } = data;
- 
+
   const [open, setOpen] = useState(false);
   const items = [1, 2, 3, 4];
 
@@ -61,7 +61,7 @@ export default function Hero({ data }: AgentData) {
         </section>
         {open && (
           <div className="    shadow max-w-5xl    px-2   2xl:px-48 ">
-            {abilities.map((ability) => {
+            {abilities.map((ability, index) => {
               if (!ability?.displayIcon) {
                 return;
               }
@@ -69,7 +69,10 @@ export default function Hero({ data }: AgentData) {
                 return;
               }
               return (
-                <div className="flex-col flex sm:flex-row  sm:gap-8 flex-wrap  border-b border-gameMiddleRed items-center ">
+                <div
+                  key={index}
+                  className="flex-col flex sm:flex-row  sm:gap-8 flex-wrap  border-b border-gameMiddleRed items-center "
+                >
                   <p className="   text-gameLightRed font-valorant text-2xl py-4 sm:[writing-mode:vertical-lr]">
                     {ability?.displayName}
                   </p>

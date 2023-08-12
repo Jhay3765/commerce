@@ -10,8 +10,8 @@ export default async function Page() {
   return (
     <div className=" flex justify-center items-center bg-gameBlack w-full py-8">
       <ul className="flex gap-8 flex-wrap justify-center">
-        {ValorantData.map((agent: AgentData) => {
-          return <AgentCard data={agent} />;
+        {ValorantData.map((agent: AgentData, index: number) => {
+          return <AgentCard data={agent} key={index} />;
         })}
       </ul>
     </div>

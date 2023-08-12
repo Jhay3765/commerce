@@ -39,7 +39,7 @@ export default function AgentCard({ data }: AgentCardProps) {
         </div>
 
         <article className="flex gap-4">
-          {abilities.map((ability) => {
+          {abilities.map((ability, index) => {
             if (!ability?.displayIcon) {
               return;
             }
@@ -47,7 +47,7 @@ export default function AgentCard({ data }: AgentCardProps) {
               return;
             }
             return (
-              <div className="border  p-1 h-fit rounded-lg">
+              <div key={index} className="border  p-1 h-fit rounded-lg">
                 <Image
                   alt="img"
                   width={30}
