@@ -7,8 +7,8 @@ type Props = {
 };
 export default function FeaturedCard(props: Props) {
   return (
-    <div className="rounded-2xl  w-fit flex flex-col gap-8">
-      <div className="relative w-80 h-96">
+    <div className="rounded-2xl  w-fit flex flex-col gap-8 ">
+      <div className="relative w-60 h-72">
         <Image
           src={props.img}
           alt=""
@@ -18,7 +18,7 @@ export default function FeaturedCard(props: Props) {
         />
       </div>
 
-      <h2 className="text-center bg-gameMiddleRed text-gameWhite py-4 rounded-sm font-bold tracking-wider text-xl">
+      <h2 className="text-center bg-gameBlack text-gameWhite py-4 rounded-sm font-bold tracking-wider text-xl">
         {props.title}
       </h2>
     </div>

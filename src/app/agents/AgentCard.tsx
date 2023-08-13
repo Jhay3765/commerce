@@ -25,16 +25,16 @@ export default function AgentCard({ data }: AgentCardProps) {
   const { displayName: roleName } = role || {};
 
   return (
-    <section className="bg-gameMiddleRed w-96 h-48  shadow py-4 px-4  ">
-      <main className="grid grid-cols-2 gap-4 ">
-        <div className="">
+    <section className="bg-gameMiddleRed max-w-[348px]   text-center shadow py-4 px-4  ">
+      <main className=" gap-4 grid grid-col-2  ">
+        <div className=" ">
           <h1 className="font-valorant text-4xl pt-2">{displayName}</h1>
           <p className="  text-gameWhite px-2  rounded-md font-thin ">
             {roleName}
           </p>
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center shadow-lg py-2">
           <Image alt="img" width={100} height={200} src={displayIcon} />
         </div>
 
@@ -63,7 +63,7 @@ export default function AgentCard({ data }: AgentCardProps) {
             href={
               displayName == "KAY/O" ? "agents/Kayo" : "agents/" + displayName
             }
-            className="py-2 px-2 border rounded-md text-sm text-white w-fit hover:border-2 hover:-m-1 "
+            className="py-2 px-4 border rounded-md  text-white w-fit font-bold hover:border-2 hover:-m-1 "
           >
             View Agent
           </Link>

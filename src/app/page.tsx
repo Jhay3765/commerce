@@ -1,13 +1,14 @@
 import React from "react";
-import Link from "next/link";
 import Landing from "./components/Landing";
-import NavBar from "./components/NavBar";
 import Featured from "./components/Featured";
+import Newsletter from "./components/Newsletter";
 export default function Page() {
   return (
-    <main className="overflow-x-hidden">
+    <main className="bg-gameBlack">
       <Landing />
+      <div className="h-4 bg-gameMiddleRed w-full"></div>
       <Featured />
+      <Newsletter />
     </main>
   );
 }
