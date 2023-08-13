@@ -3,11 +3,8 @@ import React from "react";
 export default function Newsletter() {
   return (
     <div className="flex justify-center py-24 ">
-      <h2 className="text-gameWhite text-9xl  font-valorant absolute left-0  ">
-        VALORANT UPDATES{" "}
-      </h2>
       <section className="px-8 py-14 bg-gameMiddleRed max-w-2xl ">
-        <h1 className="font-bold  text-white text-2xl lg:text-4xl py-12 whitespace-nowrap ">
+        <h1 className="font-bold  text-white text-2xl lg:text-4xl py-12   lg:whitespace-nowrap ">
           Sign Up For Our Newsletter
         </h1>
         <form

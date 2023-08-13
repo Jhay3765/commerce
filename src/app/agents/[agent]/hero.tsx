@@ -7,6 +7,7 @@ type Agent = {
   displayName: string;
   role: roleData;
   abilities: Abilities[];
+  fullPortrait: string;
 };
 type Abilities = {
   slot: string;
@@ -23,7 +24,7 @@ type AgentData = {
 };
 
 export default function Hero({ data }: AgentData) {
-  const { displayName, role, abilities } = data;
+  const { displayName, role, abilities, fullPortrait } = data;
 
   const [open, setOpen] = useState(false);
   const items = [1, 2, 3, 4];
@@ -39,10 +40,10 @@ export default function Hero({ data }: AgentData) {
         </p>
       </article>
 
-      <main className="bg-black  py-4  ">
+      <main className="bg-gameBlack py-4  ">
         <figure className="relative lg:hidden flex justify-center ">
           <Image
-            src="https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/fullportrait.png"
+            src={fullPortrait}
             alt="agent"
             className=""
             width={400}

@@ -4,6 +4,7 @@ import Hero from "./hero";
 import getData from "../../../../lib/GetData";
 import Image from "next/image";
 import { AgentVids } from "../../../../lib/Agentvids";
+import { FaQuestion } from "react-icons/fa";
 
 const agentPlace = {
   Gekko: 0,
@@ -50,7 +51,12 @@ export default async function AgentPage({ params: { agent } }: Params) {
   const CurrentAgent = ValorantDataArray[agentPlace[agent]];
 
   if (!CurrentAgent) {
-    return <div>Error : Agent Data Not Found</div>;
+    return (
+      <div className="text-4xl    lg:text-6xl text-center w-full flex justify-center items-center flex-col  py-48">
+        <FaQuestion size={200} />
+        <p className="py-4"> You have searched for an unknown agent</p>
+      </div>
+    );
   }
   console.log(CurrentAgent);
   const agentVideo = AgentVids[agent as keyof typeof AgentVids];
