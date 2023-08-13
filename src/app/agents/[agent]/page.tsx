@@ -83,7 +83,7 @@ export default async function AgentPage({ params: { agent } }: Params) {
             {CurrentAgent?.description}
           </p>
           <iframe
-            className="p-2 rounded-sm bg-black w-full max-w-3xl"
+            className="p-1 rounded-sm bg-gameBlack w-full max-w-3xl"
             height="500"
             src={agentVideo}
           ></iframe>
@@ -93,7 +93,7 @@ export default async function AgentPage({ params: { agent } }: Params) {
         className="text-black/30 text-[300px] font-valorant fixed bottom-0  lg:px-48 -z-40"
         style={{ writingMode: "vertical-rl" }}
       >
-        GEKKO
+        {CurrentAgent?.displayName}
       </h2>
     </div>
   );

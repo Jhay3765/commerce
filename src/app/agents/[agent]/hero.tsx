@@ -31,7 +31,7 @@ export default function Hero({ data }: AgentData) {
 
   return (
     <section className="bg-gameMiddleRed -z-10 ">
-      <article className="leading-3 max-w-7xl sm:px-48 text-center sm:text-left ">
+      <article className="leading-3 max-w-7xl text-gameBlack sm:px-48 text-center sm:text-left ">
         <p className="font-valorant text-5xl    2xl:text-9xl pt-12 ">
           {displayName.toUpperCase()}
         </p>
