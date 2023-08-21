@@ -61,7 +61,7 @@ export default function Hero({ data }: AgentData) {
           </button>
         </section>
         {open && (
-          <div className="    shadow max-w-5xl    px-2   2xl:px-48 ">
+          <div className="        px-2   2xl:px-48 ">
             {abilities.map((ability, index) => {
               if (!ability?.displayIcon) {
                 return;

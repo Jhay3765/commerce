@@ -1,22 +1,19 @@
 import React from "react";
-
+import Link from "next/link";
 export default function Landing() {
   return (
-    <section className="bg-[url('/Valgif.gif')] pb-80  bg-center -z-10  ">
-      <h1
-        className="font-valorant absolute text-6xl -z-20 text-gameBlack/10 bottom-0"
-        style={{ writingMode: "vertical-lr" }}
-      >
-        WELCOME{" "}
-      </h1>
+    <section className="bg-[url('/bg.jpeg')] h-screen bg-cover   bg-bottom -z-10  ">
       <main className="py-14 px-2  lg:px-14">
-        <div className="text-4xl    lg:text-6xl font-valorant text-gameBlack">
+        <div className="text-4xl mb-16 py-12 lg:py-0 lg:text-6xl font-valorant text-gameWhite">
           Welcome Agent, To{" "}
           <span className="border-b-4 border-gameMiddleRed">Valorant.gg</span>
         </div>
-        <button className="bg-gameLightRed px-8 py-2 pt-3 text-3xl my-8 font-valorant">
-          Join
-        </button>
+        <Link
+          href={"/agents"}
+          className="text-2xl text-gameWhite font-valorant bg-gameLightRed px-8 py-2 pt-3 hover:bg-gameBlack transition-all duration-300 hover:-translate-y-2 "
+        >
+          See Agents
+        </Link>
       </main>
     </section>
   );
